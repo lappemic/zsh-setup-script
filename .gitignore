@@ -1,0 +1,37 @@
+# Bash/Shell specific
+*.sh.swp
+*.sh~
+
+# Logs
+*.log
+logs/
+
+# Backup files
+*~
+*.bak
+*.backup
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Local configuration
+.env
+.env.local
+*.local.conf
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# User-specific directories
+zsh_backup*/
+
