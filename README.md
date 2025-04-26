@@ -14,7 +14,7 @@ This repository contains a shell script that automates the complete installation
 - Comprehensive backup of existing configurations
 - Detailed logging for troubleshooting
 - Checks for and handles errors gracefully
-- Automated installation of ZSH, Oh-My-ZSH, and popular plugins (zsh-autosuggestions, zsh-syntax-highlighting, fzf)
+- Automated installation of ZSH, Oh-My-ZSH, and popular plugins (zsh-autosuggestions, fzf)
 - Adds a quick Vim access alias (`v` for `vim`)
 
 ## System Requirements
@@ -61,7 +61,7 @@ When executed, the script performs the following actions:
 
 4. **Configures ZSH for all users**
    - Installs Oh-My-ZSH for each user with a valid home directory
-   - Installs and enables plugins: zsh-autosuggestions, zsh-syntax-highlighting, and fzf (if available)
+   - Installs and enables plugins: zsh-autosuggestions and fzf (if available)
    - Adds an alias `v` for quick Vim access
    - Sets ZSH as the default shell for each user
    - Configures proper permissions for all files
@@ -159,7 +159,7 @@ After installation, users can customize their ZSH environments:
 
 - Edit `.zshrc` in the user's home directory to change settings
 - Explore Oh-My-ZSH themes by modifying the `ZSH_THEME` property in `.zshrc`
-- Add plugins by modifying the `plugins` array in `.zshrc` (the script enables `git`, `vi-mode`, `zsh-autosuggestions`, `zsh-syntax-highlighting`, and `fzf` if installed)
+- Add plugins by modifying the `plugins` array in `.zshrc` (the script enables `git`, `vi-mode`, `zsh-autosuggestions`, and `fzf` if installed)
 - Use the `v` alias for quick access to Vim
 
 ## License

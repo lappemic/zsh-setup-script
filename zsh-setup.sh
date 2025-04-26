@@ -144,19 +144,12 @@ install_oh_my_zsh_for_user() {
     # Create a new .zshrc file
     cp "$home_dir/.oh-my-zsh/templates/zshrc.zsh-template" "$home_dir/.zshrc" || error_exit "Failed to create .zshrc for user $user."
     
-    # Install Oh-My-Zsh plugins: zsh-autosuggestions, zsh-syntax-highlighting
+    # Install Oh-My-Zsh plugins: zsh-autosuggestions
     if [ ! -d "$home_dir/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
         if [ "$user" = "root" ]; then
             git clone --quiet https://github.com/zsh-users/zsh-autosuggestions "$home_dir/.oh-my-zsh/custom/plugins/zsh-autosuggestions" || warning "Failed to clone zsh-autosuggestions for $user."
         else
             su - "$user" -c "git clone --quiet https://github.com/zsh-users/zsh-autosuggestions $home_dir/.oh-my-zsh/custom/plugins/zsh-autosuggestions" || warning "Failed to clone zsh-autosuggestions for $user."
-        fi
-    fi
-    if [ ! -d "$home_dir/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then
-        if [ "$user" = "root" ]; then
-            git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting "$home_dir/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" || warning "Failed to clone zsh-syntax-highlighting for $user."
-        else
-            su - "$user" -c "git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting $home_dir/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" || warning "Failed to clone zsh-syntax-highlighting for $user."
         fi
     fi
 
@@ -167,7 +160,7 @@ install_oh_my_zsh_for_user() {
     fi
 
     # Update plugins line in .zshrc
-    plugins_line="plugins=(git vi-mode zsh-autosuggestions zsh-syntax-highlighting"
+    plugins_line="plugins=(git vi-mode zsh-autosuggestions"
     if command -v fzf >/dev/null 2>&1; then
         plugins_line="$plugins_line fzf"
     fi
