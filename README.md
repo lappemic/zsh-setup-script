@@ -6,6 +6,8 @@ A comprehensive, automated script to install ZSH, Oh-My-ZSH, and configure ZSH a
 
 This repository contains a shell script that automates the complete installation and configuration of ZSH (Z Shell) with Oh-My-ZSH for all users on an Ubuntu/Debian-based system. It ensures that ZSH is set as the default shell for both existing and future users.
 
+For more projects and information, visit [michaelscheiwiller.com](https://michaelscheiwiller.com)
+
 ### Features
 
 - Automated installation of ZSH and Oh-My-ZSH
